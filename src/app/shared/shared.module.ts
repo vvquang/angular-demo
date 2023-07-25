@@ -11,11 +11,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // Components
-// import { ToastComponent }             from './components/blocks/toast/toast.component';
-// import { ProgressBarComponent }       from './components/blocks/progress-bar/progress-bar.component';
+// import { ToastComponent }             from '@app/components/toast/toast.component';
+import { ProgressBarComponent }       from '@app/components/progress-bar/progress-bar.component';
 
 // Forms
 // import { FormConfirmComponent }      from './components/forms/form-confirm/form-confirm.component';
@@ -48,6 +49,7 @@ import { MainLayoutComponent } from 'src/app/layouts/main-layout/main-layout.com
     MatButtonModule,
     MatInputModule,
     MatCardModule,
+    MatTableModule,
 
     FontAwesomeModule,
   ],
@@ -55,7 +57,7 @@ import { MainLayoutComponent } from 'src/app/layouts/main-layout/main-layout.com
   [
     // Components
     // ToastComponent,
-    // ProgressBarComponent,
+    ProgressBarComponent,
 
     // Forms
     // FormConfirmComponent,
@@ -86,11 +88,12 @@ import { MainLayoutComponent } from 'src/app/layouts/main-layout/main-layout.com
     MatButtonModule,
     MatInputModule,
     MatCardModule,
+    MatTableModule,
     FontAwesomeModule,
 
     // Components
     // ToastComponent,
-    // ProgressBarComponent,
+    ProgressBarComponent,
 
     // Forms
     // FormConfirmComponent,

@@ -1,7 +1,7 @@
-const scheme = 'http://';
-const host   = 'localhost';
-const port   = ':5000';
-const path   = '/api/';
+const scheme = 'https://';
+const host   = 'jsonplaceholder.typicode.com';
+const port   = '';
+const path   = '';
 
 const baseUrl = scheme + host + port + path;
 
