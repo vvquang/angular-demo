@@ -1,0 +1,38 @@
+<mat-list-item role="listitem">
+  <div class="todo-item">
+    <span>{{ itemIndex }}</span>
+    <span>{{ item.label }}</span>
+
+    <div>
+      <button *ngIf="isEditing" mat-mini-fab color="primary" aria-label="" (click)="onQuantityChange(eProductChange.SUBTRACT)"
+      [disabled]="this.quantity===0">
+        <fa-icon [icon]="faMinus"></fa-icon>
+      </button>
+
+    <input type="number" matInput readonly [value]="quantity">
+
+    <button *ngIf="isEditing" mat-mini-fab color="primary" aria-label="" (click)="onQuantityChange(eProductChange.ADD)">
+      <fa-icon [icon]="faPlus"></fa-icon>
+    </button>
+    </div>
+
+    <div *ngIf="isEditing">
+      <button mat-icon-button aria-label="" (click)="submitTodo()">
+        <fa-icon [icon]="faCheck"></fa-icon>
+      </button>
+      <button mat-icon-button aria-label="" (click)="cancelSubmit()">
+        <fa-icon [icon]="faXmark"></fa-icon>
+      </button>
+    </div>
+
+    <div *ngIf="!isEditing">
+      <button mat-icon-button aria-label="" (click)="editTodo()">
+        <fa-icon [icon]="faPenToSquare"></fa-icon>
+      </button>
+
+      <button mat-icon-button color="warn" aria-label="" (click)="removeTodo()">
+        <fa-icon [icon]="faTrashCan"></fa-icon>
+      </button>
+    </div>
+  </div>
+</mat-list-item>

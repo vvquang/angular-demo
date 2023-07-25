@@ -1,0 +1,13 @@
+.todo-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #aaa;
+
+  .submit {
+    margin-bottom: 22px;
+  }
+}
