@@ -34,14 +34,26 @@ app-login {
   }
 
   .error {
-    padding: 16px;
-    width: 300px;
-    color: white;
-    background-color: red;
+    color: red;
+    margin-top: -5px;
+    margin-bottom: 10px;
   }
 
   .button {
     display: flex;
-    justify-content: flex-end;
+    justify-content:center;
+  }
+
+  .login-title {
+    padding: 20px;
+  }
+
+  .forgot-password {
+    margin-top: 15px;
+    text-align: end;
+  }
+
+  .mat-mdc-form-field {
+    width: 100%;
   }
 }

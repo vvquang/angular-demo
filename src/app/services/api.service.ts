@@ -17,6 +17,7 @@ import { environment } from '@env/environment';
 import { StoreService } from './store.service';
 import { LocalStorageService } from './local-storage.service';
 import { storageKeys } from '@app/constants/storage-keys';
+import { IAuthStorage } from '@app/models/auth.model';
 
 @Injectable()
 export abstract class ApiService {
@@ -81,7 +82,7 @@ export abstract class ApiService {
       ...this.default,
     });
 
-    const authProfile = this.storageService.getValue<{ token: string }>(storageKeys.authProfile);
+    const authProfile = this.storageService.getValue<IAuthStorage>(storageKeys.authProfile);
     const token = authProfile?.token || '';
     httpClient.defaults.headers.common['Authorization'] = 'Bearer ' + token;
 

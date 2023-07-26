@@ -19,4 +19,18 @@ app-auth {
     display: flex;
     flex-direction: column;
   }
+
+  .logo-link {
+    text-decoration: none;
+  }
+
+  .logo {
+    height: 24px;
+    width: 24px;
+    margin-right: 5px;
+  }
+
+  .app-name {
+    font-weight: 500;
+  }
 }

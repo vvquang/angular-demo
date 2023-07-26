@@ -1,22 +1,32 @@
 <header class="header">
-  <nav class="header__navi">
-    <ul class="left">
-      <li>
-        <a [routerLink]="['/']" routerLinkActive="active">
-          Home
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/todo']" routerLinkActive="active">
-          Todo
-        </a>
-      </li>
-    </ul>
+  <div class="header__content">
+    <div class="header__content--left">
+      <a [routerLink]="['/']">
+        <img class="logo" src="assets/images/logo.png" alt="logo">
+      </a>
+      <nav class="header-navi">
+        <ul>
+          <li>
+            <a [routerLink]="['/']" routerLinkActive="active">
+              Home
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/todo']" routerLinkActive="active">
+              Todo
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-    <ul class="right">
-      <li>
-        <a [routerLink]="['/auth/login']">Logout</a>
-      </li>
-    </ul>
-  </nav>
+    <div class="header__content--right">
+      <div>
+        <span>Role: {{ roleLabel }}</span>
+      </div>
+      <div>
+        <span class="logout" (click)="onLogout()">Logout</span>
+      </div>
+    </div>
+  </div>
 </header>

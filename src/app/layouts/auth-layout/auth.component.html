@@ -1,12 +1,14 @@
-<!-- <app-progress-bar class="position-fixed w-100" *ngIf="storeService.isLoading$ | async"></app-progress-bar> -->
-
 <div class="auth">
   <header class="auth__header">
-    {{ appName }}
+    <a [routerLink]="['/']" class="logo-link">
+      <img class="logo" src="assets/images/logo.png" alt="logo">
+      <span class="app-name">
+        {{ appName }}
+      </span>
+    </a>
   </header>
 
   <main class="auth__main">
-    <!-- NOTE Content -->
     <router-outlet></router-outlet>
   </main>
 </div>

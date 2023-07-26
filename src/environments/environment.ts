@@ -7,6 +7,6 @@ const baseUrl = scheme + host + port + path;
 
 export const environment = {
   production      : false,
-  appName         : 'Angular Demo',
+  appName         : 'Pet',
   apiBaseUrl      : baseUrl,
 };

@@ -43,13 +43,14 @@ export class LoginComponent {
   }
 
   public async onSubmit(): Promise<void> {
-    console.log('hehe', this.formGroup)
-    this.storeService?.setIsLoading(true);
+    if (!this.formGroup.valid) {
+      this.error = 'Please enter email or password correct!';
+      return;
+    }
 
-    // const email    = this.formGroup.controls.email.getRawValue();
-    // const password = this.formGroup.controls.password.getRawValue();
-    const email    = this.formGroup.value.email || '';
-    const password = this.formGroup.value.password || '';
+    this.storeService.setIsLoading(true);
+
+    const { email = '', password ='' } = this.formGroup.value;
     const success  = await this.authService.authenticate(email, password);
 
     this.storeService?.setIsLoading(false);
