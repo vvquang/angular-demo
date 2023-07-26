@@ -25,7 +25,7 @@ const useToast = () => {
     // ...
 
     Toastify({
-      duration: 30000,
+      duration: 5000,
       gravity: 'top',
       position: 'right',
       close: true,
