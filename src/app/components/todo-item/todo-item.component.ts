@@ -54,11 +54,11 @@ export class TodoItemComponent implements OnInit {
 
   submitTodo() {
     this.isEditing = false
-    this.onEdit.emit({ id: this.item.id, quantity: this.quantity })
+    this.edit.emit({ id: this.item.id, quantity: this.quantity })
   }
 
   removeTodo() {
-    this.onDelete.emit(this.item.id)
+    this.delete.emit(this.item.id)
   }
 
   cancelSubmit() {
