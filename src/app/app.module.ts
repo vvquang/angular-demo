@@ -11,10 +11,7 @@ import { SharedModule } from './shared/shared.module'
 import { StoreService } from './services/store.service'
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PageNotFoundComponent, // ?
-  ],
+  declarations: [AppComponent, PageNotFoundComponent],
   imports: [
     // Angular modules
     BrowserModule,
