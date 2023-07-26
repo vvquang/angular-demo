@@ -1,0 +1,23 @@
+<div class="todo">
+  <img [src]="imgSrc" alt="image" class="image-bg" />
+  <h1 [ngStyle]="{ color: 'green' }">{{ title }}</h1>
+
+  <div class="todo__wrapper">
+    <app-todo-input />
+
+    <mat-list role="list" class="todo-list">
+      <app-todo-item
+        *ngFor="let todoItem of todos$ | async; let itemIndex = index"
+        [itemIndex]="itemIndex"
+        [item]="todoItem"
+        (edit)="onEditTodo($event)"
+        (delete)="onDeleteTodo($event)"
+      />
+    </mat-list>
+
+    <div class="todo__footer">
+      <span>Total items: {{ length }}</span>
+      <span>Sum: {{ total$ | async }}</span>
+    </div>
+  </div>
+</div>

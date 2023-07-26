@@ -1,0 +1,59 @@
+app-login {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .login-form {
+    max-width: 400px;
+    width: 100%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  }
+
+  :host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+  }
+
+  .mat-form-field {
+    width: 100%;
+    min-width: 300px;
+  }
+
+  mat-card-title,
+  mat-card-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .error {
+    color: red;
+    margin-top: -5px;
+    margin-bottom: 10px;
+  }
+
+  .button {
+    display: flex;
+    justify-content:center;
+  }
+
+  .login-title {
+    padding: 20px;
+  }
+
+  .forgot-password {
+    margin-top: 15px;
+    text-align: end;
+  }
+
+  .mat-mdc-form-field {
+    width: 100%;
+  }
+}

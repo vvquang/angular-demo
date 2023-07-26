@@ -1,0 +1,14 @@
+<div class="auth">
+  <header class="auth__header">
+    <a [routerLink]="['/']" class="logo-link">
+      <img class="logo" src="assets/images/logo.png" alt="logo">
+      <span class="app-name">
+        {{ appName }}
+      </span>
+    </a>
+  </header>
+
+  <main class="auth__main">
+    <router-outlet></router-outlet>
+  </main>
+</div>
