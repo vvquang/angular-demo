@@ -31,6 +31,7 @@
     "axios": "^1.4.0",
     "lodash-es": "^4.17.21",
     "rxjs": "~7.8.0",
+    "toastify-js": "^1.12.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },
@@ -47,6 +48,7 @@
     "@commitlint/config-conventional": "^17.6.7",
     "@types/jasmine": "~4.3.0",
     "@types/lodash-es": "^4.17.8",
+    "@types/toastify-js": "^1.12.0",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
     "commitlint-config-gitmoji": "^2.3.1",

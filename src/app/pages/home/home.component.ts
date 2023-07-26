@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import useToast from '@app/hooks/useToast'
 import { HomeService } from '@app/services/home.service'
 
 export interface PeriodicElement {
@@ -14,6 +15,8 @@ export interface PeriodicElement {
   providers: [HomeService],
 })
 export class HomeComponent implements OnInit {
+  useToast = useToast()
+
   constructor(private homeService: HomeService) {}
 
   dataSource: PeriodicElement[] = []
@@ -21,5 +24,30 @@ export class HomeComponent implements OnInit {
 
   async ngOnInit() {
     this.dataSource = await this.homeService.getPosts()
+  }
+
+  public onNotiInfo() {
+    useToast().showToast({
+      type: 'info',
+      text: 'Info !!!',
+    })
+  }
+  public onNotiSuccess() {
+    useToast().showToast({
+      type: 'success',
+      text: 'Success !!!',
+    })
+  }
+  public onNotiWarring() {
+    useToast().showToast({
+      type: 'warring',
+      text: 'Warring !!!',
+    })
+  }
+  public onNotiError() {
+    useToast().showToast({
+      type: 'error',
+      text: 'Error !!!',
+    })
   }
 }
