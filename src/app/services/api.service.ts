@@ -12,7 +12,7 @@ import { environment } from '@env/environment'
 import { StoreService } from './store.service'
 import { LocalStorageService } from './local-storage.service'
 import { storageKeys } from '@app/constants/storage-keys'
-import { IAuthStorage } from '@app/models/auth.model'
+import { IAuthStorage } from '@app/interfaces/auth.interface'
 
 @Injectable()
 export abstract class ApiService {

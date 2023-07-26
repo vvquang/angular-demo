@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core'
 import { storageKeys } from '@app/constants/storage-keys'
 import { ApiService } from './api.service'
 import { ERole } from '@app/enums/role.enum'
-import { IAuthStorage } from '@app/models/auth.model'
+import { IAuthStorage } from '@app/interfaces/auth.interface'
 
 @Injectable()
 export class AuthService extends ApiService {

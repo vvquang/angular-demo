@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router'
 import { storageKeys } from '@app/constants/storage-keys'
-import { IAuthStorage } from '@app/models/auth.model'
+import { IAuthStorage } from '@app/interfaces/auth.interface'
 import { LocalStorageService } from '@app/services/local-storage.service'
 
 @Injectable({ providedIn: 'root' })

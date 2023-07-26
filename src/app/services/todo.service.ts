@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'
 import { BehaviorSubject, Observable } from 'rxjs'
 import { Todo } from '../models/todo.model'
-import { Filter } from '../models/filtering.model'
+import { Filter } from '../interfaces/filtering.interface'
 import { LocalStorageService } from './local-storage.service'
 import { findIndex } from 'lodash-es'
 
