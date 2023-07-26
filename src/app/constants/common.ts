@@ -1,4 +1,4 @@
-import { ERole } from "@app/enums/role.enum";
+import { ERole } from '@app/enums/role.enum'
 
 export const ROLES = [
   {

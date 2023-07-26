@@ -1,23 +1,18 @@
 // Angular modules
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
 
 // External modules
-import axios, {
-  AxiosResponse,
-  AxiosError,
-  AxiosInstance,
-  CreateAxiosDefaults,
-} from 'axios';
+import axios, { AxiosError, AxiosInstance, CreateAxiosDefaults } from 'axios'
 
 // Internal modules
 // import { ToastManager }             from '@app/components/toast/toast.manager';
-import { environment } from '@env/environment';
+import { environment } from '@env/environment'
 
 // Services
-import { StoreService } from './store.service';
-import { LocalStorageService } from './local-storage.service';
-import { storageKeys } from '@app/constants/storage-keys';
-import { IAuthStorage } from '@app/models/auth.model';
+import { StoreService } from './store.service'
+import { LocalStorageService } from './local-storage.service'
+import { storageKeys } from '@app/constants/storage-keys'
+import { IAuthStorage } from '@app/models/auth.model'
 
 @Injectable()
 export abstract class ApiService {
@@ -29,7 +24,7 @@ export abstract class ApiService {
       'Content-Type': 'application/json',
       Accept: 'application/json',
     },
-  };
+  }
 
   constructor(
     private storeService: StoreService,
@@ -40,36 +35,36 @@ export abstract class ApiService {
   public initRequestInterceptor(instance: AxiosInstance): void {
     instance.interceptors.request.use(
       (config) => {
-        this.storeService.setIsLoading(true);
+        this.storeService.setIsLoading(true)
 
-        return config;
+        return config
       },
       (error) => {
-        this.storeService.setIsLoading(false);
+        this.storeService.setIsLoading(false)
 
         // this.toastManager.quickShow(error);
-        return Promise.reject(error);
+        return Promise.reject(error)
       }
-    );
+    )
   }
 
   public initResponseInterceptor(instance: AxiosInstance): void {
     instance.interceptors.response.use(
       (response) => {
-        this.storeService.setIsLoading(false);
+        this.storeService.setIsLoading(false)
 
-        return response;
+        return response
       },
       async (error: AxiosError) => {
-        this.storeService.setIsLoading(false);
+        this.storeService.setIsLoading(false)
 
         // NOTE Prevent request canceled error
-        if (error.code === 'ERR_CANCELED') return Promise.resolve(error);
+        if (error.code === 'ERR_CANCELED') return Promise.resolve(error)
 
         // this.toastManager.quickShow(error.message);
-        return Promise.reject(error);
+        return Promise.reject(error)
       }
-    );
+    )
   }
 
   /**
@@ -80,15 +75,15 @@ export abstract class ApiService {
     const httpClient: AxiosInstance = axios.create({
       baseURL: environment.apiBaseUrl,
       ...this.default,
-    });
+    })
 
-    const authProfile = this.storageService.getValue<IAuthStorage>(storageKeys.authProfile);
-    const token = authProfile?.token || '';
-    httpClient.defaults.headers.common['Authorization'] = 'Bearer ' + token;
+    const authProfile = this.storageService.getValue<IAuthStorage>(storageKeys.authProfile)
+    const token = authProfile?.token || ''
+    httpClient.defaults.headers.common['Authorization'] = 'Bearer ' + token
 
-    this.initRequestInterceptor(httpClient);
-    this.initResponseInterceptor(httpClient);
+    this.initRequestInterceptor(httpClient)
+    this.initResponseInterceptor(httpClient)
 
-    return httpClient;
+    return httpClient
   }
 }

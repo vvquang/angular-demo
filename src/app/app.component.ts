@@ -1,5 +1,5 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { StoreService } from './services/store.service';
+import { Component, ViewEncapsulation } from '@angular/core'
+import { StoreService } from './services/store.service'
 
 @Component({
   selector: 'app-root',

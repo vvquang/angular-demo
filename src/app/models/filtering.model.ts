@@ -1,7 +1,7 @@
 export interface FilterButton {
-  type: Filter;
-  label: string;
-  isActive: boolean;
+  type: Filter
+  label: string
+  isActive: boolean
 }
 export enum Filter {
   All,

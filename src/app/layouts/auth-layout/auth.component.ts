@@ -1,36 +1,27 @@
 // Angular modules
-import { Component, ViewEncapsulation }    from '@angular/core';
-import { OnInit }       from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core'
+// import { OnInit } from '@angular/core'
 
 // // Internal modules
-import { environment }  from '@env/environment';
+import { environment } from '@env/environment'
 
 // // Services
 // import { StoreService } from '@services/store.service';
 
 @Component({
-  selector    : 'app-auth',
-  templateUrl : './auth.component.html',
-  styleUrls   : ['./auth.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  selector: 'app-auth',
+  templateUrl: './auth.component.html',
+  styleUrls: ['./auth.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
-export class AuthComponent implements OnInit
-{
+export class AuthComponent {
   // NOTE Component properties
-  public appName    : string  = environment.appName;
+  public appName: string = environment.appName
   // public appVersion : string  = environment.version;
 
-  constructor
-  (
-    // public storeService : StoreService,
-  )
-  {
+  // constructor() {} // public storeService : StoreService,
 
-  }
-
-  public ngOnInit() : void
-  {
-  }
+  // public ngOnInit(): void {}
 
   // -------------------------------------------------------------------------------
   // NOTE Init ---------------------------------------------------------------------
@@ -55,5 +46,4 @@ export class AuthComponent implements OnInit
   // -------------------------------------------------------------------------------
   // NOTE Subscriptions ------------------------------------------------------------
   // -------------------------------------------------------------------------------
-
 }

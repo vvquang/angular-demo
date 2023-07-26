@@ -1,22 +1,22 @@
 // Angular modules
-import { CommonModule }               from '@angular/common';
-import { NgModule }                   from '@angular/core';
-import { FormsModule }                from '@angular/forms';
-import { ReactiveFormsModule }        from '@angular/forms';
-import { RouterModule }               from '@angular/router';
+import { CommonModule } from '@angular/common'
+import { NgModule } from '@angular/core'
+import { FormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms'
+import { RouterModule } from '@angular/router'
 
 // External modules
-import { MatListModule } from '@angular/material/list';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
-import { MatCardModule } from '@angular/material/card';
-import { MatTableModule } from '@angular/material/table';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MatListModule } from '@angular/material/list'
+import { MatIconModule } from '@angular/material/icon'
+import { MatButtonModule } from '@angular/material/button'
+import { MatInputModule } from '@angular/material/input'
+import { MatCardModule } from '@angular/material/card'
+import { MatTableModule } from '@angular/material/table'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 // Components
 // import { ToastComponent }             from '@app/components/toast/toast.component';
-import { ProgressBarComponent }       from '@app/components/progress-bar/progress-bar.component';
+import { ProgressBarComponent } from '@app/components/progress-bar/progress-bar.component'
 
 // Forms
 // import { FormConfirmComponent }      from './components/forms/form-confirm/form-confirm.component';
@@ -26,17 +26,15 @@ import { ProgressBarComponent }       from '@app/components/progress-bar/progres
 
 // Layouts
 import { HeaderComponent } from 'src/app/components/header/header.component'
-import { MainLayoutComponent } from 'src/app/layouts/main-layout/main-layout.component';
+import { MainLayoutComponent } from 'src/app/layouts/main-layout/main-layout.component'
 
 // Pipes
 
 // Directives
 // import { ModalWrapperDirective }     from './directives/modal-wrapper.directive';
 
-
 @NgModule({
-  imports         :
-  [
+  imports: [
     // Angular modules
     CommonModule,
     RouterModule,
@@ -53,8 +51,7 @@ import { MainLayoutComponent } from 'src/app/layouts/main-layout/main-layout.com
 
     FontAwesomeModule,
   ],
-  declarations    :
-  [
+  declarations: [
     // Components
     // ToastComponent,
     ProgressBarComponent,
@@ -74,8 +71,7 @@ import { MainLayoutComponent } from 'src/app/layouts/main-layout/main-layout.com
     // Directives
     // ModalWrapperDirective
   ],
-  exports         :
-  [
+  exports: [
     // Angular modules
     CommonModule,
     RouterModule,
@@ -110,8 +106,6 @@ import { MainLayoutComponent } from 'src/app/layouts/main-layout/main-layout.com
     // Directives
     // ModalWrapperDirective
   ],
-  providers       :
-  [
-  ]
+  providers: [],
 })
 export class SharedModule {}

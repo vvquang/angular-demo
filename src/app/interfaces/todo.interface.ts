@@ -1,6 +1,5 @@
 export interface ProductType {
-  id: string,
-  label: string;
-  quantity: number;
+  id: string
+  label: string
+  quantity: number
 }
-
