@@ -1,9 +1,9 @@
 <div class="home-page">
   <div [ngStyle]="{ 'margin-bottom': '50px', display: 'flex', gap: '20px' }">
-    <button mat-raised-button (click)="onNotiInfo()">Click toast Info</button>
-    <button mat-raised-button color="primary" (click)="onNotiSuccess()">Click toast success</button>
+    <button mat-raised-button color="info" (click)="onNotiInfo()">Click toast Info</button>
+    <button mat-raised-button color="success" (click)="onNotiSuccess()">Click toast success</button>
     <button mat-raised-button color="warn" (click)="onNotiWarring()">Click toast warring</button>
-    <button mat-raised-button color="accent" (click)="onNotiError()">Click toast error</button>
+    <button mat-raised-button color="error" (click)="onNotiError()">Click toast error</button>
   </div>
 
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">

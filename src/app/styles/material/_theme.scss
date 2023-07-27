@@ -1,0 +1,62 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+
+// @import "~@angular/material/theming";
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+$my-primary: mat.define-palette(mat.$indigo-palette, 500);
+$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$my-warn: mat.define-palette(
+  mat.$yellow-palette
+); // The "warn" palette is optional and defaults to red if not specified.
+
+$my-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+      warn: $my-warn,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+// Emit theme-dependent styles for common features used across multiple components.
+@include mat.core-theme($my-theme);
+
+// Emit styles for MatButton based on `$my-theme`. Because the configuration
+// passed to `define-light-theme` omits typography, `button-theme` will not
+// emit any typography styles.
+@include mat.button-theme($my-theme);
+
+// @include mat.all-component-themes($my-theme);
+
+// Include the theme mixins for other components you use here.
+
+// // Define the palettes for your theme using the Material Design palettes available in palette.scss
+// // (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// // hue. Available color palettes: https://material.io/design/color/
+// $theming-material-components-primary: mat.define-palette(mat.$indigo-palette, 500);
+// $theming-material-components-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// // The warn palette is optional (defaults to red).
+// $theming-material-components-warn: mat.define-palette(mat.$red-palette, 500);
+
+// // Create the theme object (a Sass map containing all of the palettes).
+// $theming-material-components-theme: mat-light-theme(
+//   $theming-material-components-primary,
+//   $theming-material-components-accent,
+//   $theming-material-components-warn
+// );
+
+// // Include theme styles for core and each component used in your app.
+// // Alternatively, you can import and @include the theme mixins for each component
+// // that you are using.
+// @include angular-material-theme($theming-material-components-theme);

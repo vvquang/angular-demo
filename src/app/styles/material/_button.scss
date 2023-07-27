@@ -1,0 +1,25 @@
+.mdc-button {
+  &.mat-info {
+    color: #fff !important;
+    background-color: $color-blue-5 !important;
+  }
+  &.mat-error[disabled] {
+    background-color: $color-grey-0 !important;
+  }
+
+  &.mat-success {
+    color: #fff !important;
+    background-color: $color-secondary-500 !important;
+  }
+  &.mat-success[disabled] {
+    background-color: $color-grey-0 !important;
+  }
+
+  &.mat-error {
+    color: #fff !important;
+    background-color: $color-red-5 !important;
+  }
+  &.mat-error[disabled] {
+    background-color: $color-grey-0 !important;
+  }
+}
